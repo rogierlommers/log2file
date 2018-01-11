@@ -1,6 +1,9 @@
 ## log2file
 Sometimes you just want your (CLI) application to log certain information to a logfile. No more, no less. This package provides an easy way to achieve that.
 
+## installation
+`go get github.com/rogierlommers/log2file`
+
 ## usage
 Somewhere in your init() function, do this:
 
