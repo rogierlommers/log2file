@@ -31,6 +31,17 @@ func openFileHandler(targetFilename string) (err error) {
 }
 
 func Write(message interface{}) {
-	m := fmt.Sprintf("%s\n", message.(string))
+	var m string
+
+	switch message.(type) {
+	case int:
+		m = fmt.Sprintf("%d", message)
+	case string:
+		m = fmt.Sprintf("%s", message)
+	default:
+		fmt.Println("unknown type")
+	}
+
+	m = fmt.Sprintf("%s\n", m)
 	logFile.WriteString(m)
 }

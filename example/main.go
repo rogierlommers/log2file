@@ -7,13 +7,14 @@ import (
 )
 
 func init() {
-	if err := log2file.Activate(); err != nil {
+	if err := log2file.ActivateForFile("poep.log"); err != nil {
 		log.Fatal(err)
 	}
 }
 
 func main() {
 	for i := 0; i <= 5; i++ {
-		log2file.Write("line")
+		log2file.Write(1234)   // int
+		log2file.Write("5678") // string
 	}
 }
