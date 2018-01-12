@@ -7,7 +7,7 @@ import (
 )
 
 func init() {
-	if err := log2file.ActivateForFile("poep.log"); err != nil {
+	if err := log2file.ActivateForFile("myfile.log"); err != nil {
 		log.Fatal(err)
 	}
 }
